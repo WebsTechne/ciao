@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+
+  --color-card-background: var(--card-background);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-brd: var(--color-secondary-foreground);
+
+  --font-sans: var(--font-sans);
+  --font-boldonse: var(--font-boldonse);
+  --font-logo: var(--font-logo);
+  --font-heading: var(--font-boldonse);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: oklch(0.9646 0.0057 84.57);
+  --foreground: oklch(0.2614 0.0063 78.22);
+  --border: oklch(0.2614 0.0063 78.22);
+
+  --card-background: oklch(1 0 0);
+  --card-foreground: oklch(0.2193 0.005 67.57);
+
+  --primary: oklch(0.4641 0.2578 279.31);
+  --primary-foreground: oklch(0.9792 0.0106 291.96);
+  --secondary: oklch(0.8286 0.1532 82.13);
+  --secondary-foreground: oklch(0.2621 0.0301 90.72);
+
+  /* nurturing.webflow.io */
+  --🔑font-size--h1: clamp(2.25rem, 5vw, 4.5rem);
+  --🔑line-height--h1: 164%;
+  --🔑letter-spacing--h1: -0.04em;
+  --🔑font-size--h2: 42px;
+  --🔑line-height--h2: 154%;
+  --🔑letter-spacing--h2: -0.02em;
+  --🔑font-size--text-xl: clamp(18px, 2vw, 24px);
+  --🔑line-height--text-xl-medium: 148%;
+  --🔑letter-spacing--text-xl-medium: -0.02em;
+}
+
+@layer base {
+  * {
+    @apply border-border!;
+  }
+  body {
+    @apply bg-background text-foreground min-h-screen font-sans;
+  }
+
+  button,
+  a {
+    cursor: pointer;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+  }
+  h1 {
+    margin-top: 20px;
+    font-size: 38px;
+    line-height: 44px;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  h4 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  h5 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  h6 {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@utility flex-center {
+  @apply flex items-center justify-center;
+}
+
+@utility scrollbar-width-none {
+  scrollbar-width: none;
+}
+
+@utility btn {
+  @apply transition-all duration-250 ease-in-out active:scale-95; /* hover:scale-105 */
+}
+
+@utility heading {
+  @apply font-boldonse;
+}
+
+@utility logo {
+  @apply font-logo;
+}
+
+.hero-title,
+.heading.h1 {
+  font-size: var(--🔑font-size--h1);
+  line-height: var(--🔑line-height--h1);
+  letter-spacing: var(--🔑letter-spacing--h1);
+  font-weight: 400;
+  display: inline;
+  @apply heading font-heading;
+}
+
+.content-title,
+.heading.h2 {
+  margin-top: 0px;
+  /*margin-bottom: var(--_🚀spacings---🚀spacings--space-16);*/
+  font-size: var(--🔑font-size--h2);
+  line-height: var(--🔑line-height--h2);
+  letter-spacing: var(--🔑letter-spacing--h2);
+  font-weight: 400;
+  @apply heading;
+}
+
+.hero .text-xl {
+  font-size: var(--🔑font-size--text-xl);
+  line-height: var(--🔑line-height--text-xl-medium);
+  letter-spacing: var(--🔑letter-spacing--text-xl-medium);
+  font-weight: 700;
+}
+
+#hero {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+}
+#second-hero {
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+}
