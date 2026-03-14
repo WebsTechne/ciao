@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Boldonse, DM_Sans, Geist_Mono, Sniglet } from "next/font/google";
 import "./globals.css";
-import LayoutContent from "./layout-content";
+import { LayoutContent } from "./layout-content";
 
 const boldonse = Boldonse({
   weight: "400",
