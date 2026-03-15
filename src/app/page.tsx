@@ -297,10 +297,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/*<section
+      <section
         id="section-3"
         className="bg-background h-dvh overflow-clip"
-      ></section>*/}
+      ></section>
     </main>
   );
 }
