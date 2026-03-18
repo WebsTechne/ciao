@@ -157,7 +157,7 @@ export default function Home() {
 
   return (
     <main ref={container} className="relative">
-      <section className="relative h-[130dvh] overflow-clip border-b-2">
+      <section className="relative h-[130dvh] overflow-clip border-b-2!">
         <header className="max:w-1200 bg-primary text-primary-foreground absolute top-0 left-1/2 z-1000 flex h-16 w-full -translate-x-1/2 items-center justify-between px-4 py-2">
           <Link
             href="/"
